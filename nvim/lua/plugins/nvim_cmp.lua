@@ -4,7 +4,13 @@ return {
     event = "InsertEnter",
     config = function()
         local cmp = require("cmp")
+        local lspkind = require("lspkind")
         cmp.setup({
+            formatting = {
+                format = lspkind.cmp_format({
+                    mode = "symbol_text",
+                }),
+            },
             snippet = {
                 expand = function(args)
                   require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
@@ -68,7 +74,6 @@ return {
             config = function()
                 local lspkind = require("lspkind")
                 lspkind.init({
-                    mode = "symbol_text",
                     symbol_map = {
                         Text = "󰉿",
                         Method = "󰆧",
