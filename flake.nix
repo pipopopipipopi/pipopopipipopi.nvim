@@ -86,6 +86,24 @@
       url = "github:goolord/alpha-nvim";
       flake = false;
     };
+
+    # ui
+    lualine_nvim = {
+        url = "github:nvim-lualine/lualine.nvim";
+        flake = false;
+    };
+    nvim_web_devicons = {
+        url = "github:nvim-tree/nvim-web-devicons";
+        flake = false;
+    };
+    noice_nvim = {
+        url = "github:folke/noice.nvim";
+        flake = false;
+    };
+    nui_nvim = {
+        url = "github:MunifTanjim/nui.nvim";
+        flake = false;
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, flake-utils, ... }:

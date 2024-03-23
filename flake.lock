@@ -162,6 +162,22 @@
         "type": "github"
       }
     },
+    "lualine_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710998293,
+        "narHash": "sha256-+2fi58GolO3e0O7+kl+idNeFuTfJA1b5yCBdY2RnVjA=",
+        "owner": "nvim-lualine",
+        "repo": "lualine.nvim",
+        "rev": "b5e8bb642138f787a2c1c5aedc2a78cb2cebbd67",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lualine",
+        "repo": "lualine.nvim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1710806803,
@@ -175,6 +191,38 @@
         "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "noice_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1705952416,
+        "narHash": "sha256-lNCdwB0B5arbTEIHdDoQ19/vQ0UT89AQFwZM+RHqOTg=",
+        "owner": "folke",
+        "repo": "noice.nvim",
+        "rev": "bf67d70bd7265d075191e7812d8eb42b9791f737",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "noice.nvim",
+        "type": "github"
+      }
+    },
+    "nui_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710740032,
+        "narHash": "sha256-Zr5CNx6BIM6naCXW8YBc/Oj1qOtWV/3tuMoaaZjoSZA=",
+        "owner": "MunifTanjim",
+        "repo": "nui.nvim",
+        "rev": "cbd2668414331c10039278f558630ed19b93e69b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MunifTanjim",
+        "repo": "nui.nvim",
         "type": "github"
       }
     },
@@ -226,6 +274,22 @@
         "type": "github"
       }
     },
+    "nvim_web_devicons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1711165838,
+        "narHash": "sha256-6XCOir4E5l32xxIBKAAeRY7nEHLxJXup39CDPqFHckE=",
+        "owner": "nvim-tree",
+        "repo": "nvim-web-devicons",
+        "rev": "585b2dc4bba2b5973f2b1d3e576709af5ac34fb6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-tree",
+        "repo": "nvim-web-devicons",
+        "type": "github"
+      }
+    },
     "plenary_nvim": {
       "flake": false,
       "locked": {
@@ -254,10 +318,14 @@
         "lspkind_nvim": "lspkind_nvim",
         "lspsaga_nvim": "lspsaga_nvim",
         "lua_snip": "lua_snip",
+        "lualine_nvim": "lualine_nvim",
         "nixpkgs": "nixpkgs",
+        "noice_nvim": "noice_nvim",
+        "nui_nvim": "nui_nvim",
         "nvim_autopairs": "nvim_autopairs",
         "nvim_cmp": "nvim_cmp",
         "nvim_lspconfig": "nvim_lspconfig",
+        "nvim_web_devicons": "nvim_web_devicons",
         "plenary_nvim": "plenary_nvim",
         "rose_pine": "rose_pine",
         "telescope_file_browser_nvim": "telescope_file_browser_nvim",
