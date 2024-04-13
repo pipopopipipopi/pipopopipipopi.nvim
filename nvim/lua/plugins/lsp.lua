@@ -15,6 +15,8 @@ return {
 			})
 			-- Nix
 			lspconfig.nil_ls.setup({})
+            -- Python
+            lspconfig.pyright.setup({})
         end,
 	},
 }
