@@ -117,7 +117,7 @@
       forAllSystems = inputs.nixpkgs.lib.genAttrs allSystems;
     in {
       formatter =
-        forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt);
+        forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-rfc-style);
       packages = forAllSystems (system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
@@ -141,8 +141,6 @@
           mainDevTools = with pkgs; [
             # For telescope.nvim
             ripgrep
-            # Git TUI
-            lazygit
 
             # C/C++
             clang-tools
@@ -150,7 +148,7 @@
             lua-language-server
             stylua
             # Nix
-            nixfmt
+            nixfmt-rfc-style
             nil
             # Python
             ruff
