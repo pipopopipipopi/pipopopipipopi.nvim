@@ -164,8 +164,33 @@
             ];
 
           nvimConfig = pkgs.callPackage ./config.nix { inherit self plugins; };
+          #neovim-base =
+          #  pkgs.neovim-unwrapped.override { treesitter-parsers = {
+          #      markdown = pkgs.tree-sitter-grammars.markdown;
+          #      markdown_inline = pkgs.tree-sitter-grammars.markdown_inline;
+          #    };
+          #  };
+          treesitterParsers = {
+            markdown = pkgs.fetchFromGitHub {
+              owner = "ikatyang";
+              repo = "tree-sitter-markdown";
+              rev = "8b8b77af0493e26d378135a3e7f5ae25b555b375";
+              hash = "sha256-86sDA+8xROfuWiNrWTfN7sExAqwfj+CyXq+ZeHpKSKg=";
+            };
+            markdown_inline = pkgs.fetchFromGitHub {
+              owner = "ikatyang";
+              repo = "tree-sitter-markdown";
+              rev = "8b8b77af0493e26d378135a3e7f5ae25b555b375";
+              hash = "sha256-86sDA+8xROfuWiNrWTfN7sExAqwfj+CyXq+ZeHpKSKg=";
+
+            };
+          };
+
           neovim-base =
-            pkgs.neovim-unwrapped.override { treesitter-parsers = { }; };
+            pkgs.neovim-unwrapped.overrideAttrs (oldAttrs: {
+              inherit (treesitterParsers) markdown markdown_inline;
+            });
+
           nvimWrapped = extraPackages:
             pkgs.writeShellScriptBin "nvim" ''
               PATH=$PATH:${lib.makeBinPath extraPackages}

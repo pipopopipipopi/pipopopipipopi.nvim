@@ -2,7 +2,7 @@
 let
   envVars = plugins // {
     treesitter_parsers = lib.pipe (vimPlugins.nvim-treesitter.withPlugins
-      (p: with p; [ c commonlisp cpp latex lua nix python rust vim ])).dependencies [
+      (p: with p; [ c commonlisp cpp latex lua nix markdown markdown_inline python rust vim ])).dependencies [
         (builtins.map builtins.toString)
         (builtins.concatStringsSep ",")
       ];
