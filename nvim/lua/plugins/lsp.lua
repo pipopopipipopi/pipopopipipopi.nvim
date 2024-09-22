@@ -15,6 +15,8 @@ return {
 			})
 			-- Nix
 			lspconfig.nil_ls.setup({})
+            --Rust
+            lspconfig.rust_analyzer.setup({})
             -- Python
             lspconfig.pyright.setup({})
         end,
