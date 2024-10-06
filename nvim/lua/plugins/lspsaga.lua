@@ -4,6 +4,10 @@ return {
     event = "BufRead",
     config = function()
         local lspsaga = require("lspsaga")
-        lspsaga.setup({})
+        lspsaga.setup({
+            lightbulb = {
+                enable = false,
+            },
+        })
     end,
 }
