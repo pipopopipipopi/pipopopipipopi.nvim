@@ -20,6 +20,14 @@ vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.breakindent = true
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "nix",
+  callback = function()
+    vim.opt.tabstop = 2
+    vim.opt.expandtab = true
+    vim.opt.shiftwidth = 2
+  end
+})
 
 -- Search
 vim.opt.ignorecase = true
@@ -41,7 +49,6 @@ vim.opt.wildoptions = "pum"
 vim.opt.winblend = 0
 vim.opt.pumblend = 0
 vim.opt.background = "dark"
-vim.opt.guifont = "Hack Nerd Font Regular:h10"
 
 -- File
 vim.opt.backup = false
